@@ -43,6 +43,12 @@ const store = (function () {
     findAndDelete: function(id) {
       const itemIdx = this.items.findIndex(item => item.id === id);
       this.items.splice(itemIdx, 1);
+    },
+    toggleCheckedFilter: function() {
+      this.hideCheckedItems = !this.hideCheckedItems;
+    },
+    setSearchTerm: function(val){
+      this.searchTerm = val;
     }
   };
 
