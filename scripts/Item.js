@@ -1,5 +1,5 @@
 'use strict';
-
+/* global cuid */
 const Item = (function () {
   const itemObj = {};
   itemObj.validateName = function(name) {
