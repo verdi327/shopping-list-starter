@@ -72,8 +72,7 @@ const shoppingList = (function(){
   }
   
   function toggleCheckedForListItem(id) {
-    const foundItem = store.items.find(item => item.id === id);
-    foundItem.checked = !foundItem.checked;
+    store.findAndToggleChecked(id);
   }
   
   
@@ -92,13 +91,11 @@ const shoppingList = (function(){
   }
   
   function deleteListItem(id) {
-    const index = store.items.findIndex(item => item.id === id);
-    store.items.splice(index, 1);
+    store.findAndDelete(id);
   }
   
   function editListItemName(id, itemName) {
-    const item = store.items.find(item => item.id === id);
-    item.name = itemName;
+    store.findAndUpdateName(id, itemName);
   }
   
   function toggleCheckedItemsFilter() {
