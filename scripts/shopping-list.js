@@ -1,3 +1,5 @@
+'use strict';
+
 /* global store, cuid */
 
 // eslint-disable-next-line no-unused-vars
@@ -156,7 +158,7 @@ const shoppingList = (function(){
 
   // This object contains the only exposed methods from this module:
   return {
-    render: render,
-    bindEventListeners: bindEventListeners,
+    render,
+    bindEventListeners
   };
 }());

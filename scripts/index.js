@@ -1,3 +1,4 @@
+'use strict';
 /* global shoppingList, cuid */
 
 // eslint-disable-next-line no-unused-vars
@@ -12,7 +13,8 @@ const store = {
   searchTerm: ''
 };
 
-$(document).ready(function() {
+$(function() {
   shoppingList.bindEventListeners();
   shoppingList.render();
 });
+
